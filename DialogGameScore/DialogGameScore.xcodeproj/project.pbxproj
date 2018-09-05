@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F71AB272213F652200259626 /* DialogGameScore.podspec in Resources */ = {isa = PBXBuildFile; fileRef = F71AB271213F652200259626 /* DialogGameScore.podspec */; };
+		F71AB274213F653600259626 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = F71AB273213F653600259626 /* Podfile */; };
 		F7FB0F53213E578500CBDDBF /* DialogGameScore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7FB0F49213E578500CBDDBF /* DialogGameScore.framework */; };
 		F7FB0F58213E578500CBDDBF /* DialogGameScoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FB0F57213E578500CBDDBF /* DialogGameScoreTests.swift */; };
 		F7FB0F5A213E578500CBDDBF /* DialogGameScore.h in Headers */ = {isa = PBXBuildFile; fileRef = F7FB0F4C213E578500CBDDBF /* DialogGameScore.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -26,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F71AB271213F652200259626 /* DialogGameScore.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = DialogGameScore.podspec; path = DialogGameScore/DialogGameScore.podspec; sourceTree = SOURCE_ROOT; };
+		F71AB273213F653600259626 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
 		F7FB0F49213E578500CBDDBF /* DialogGameScore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DialogGameScore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7FB0F4C213E578500CBDDBF /* DialogGameScore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DialogGameScore.h; sourceTree = "<group>"; };
 		F7FB0F4D213E578500CBDDBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -77,6 +81,8 @@
 		F7FB0F4B213E578500CBDDBF /* DialogGameScore */ = {
 			isa = PBXGroup;
 			children = (
+				F71AB271213F652200259626 /* DialogGameScore.podspec */,
+				F71AB273213F653600259626 /* Podfile */,
 				F7FB0F6B213E589B00CBDDBF /* Model */,
 				F7FB0F68213E57AD00CBDDBF /* ViewModel */,
 				F7FB0F67213E57A600CBDDBF /* View */,
@@ -213,7 +219,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F71AB274213F653600259626 /* Podfile in Resources */,
 				F7FB0F66213E579B00CBDDBF /* GameScoreDialog.xib in Resources */,
+				F71AB272213F652200259626 /* DialogGameScore.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
