@@ -52,7 +52,8 @@ import UIKit
     }
     
     public func instanceFromNib() -> UIView {
-            return UINib(nibName:  "GameScoreDialog", bundle: Bundle(for: GameScoreDialog.self)).instantiate(withOwner: self, options: nil)[0] as! UIView
+        return UINib(nibName: "GameScoreDialog", bundle: Bundle().getBundle(swiftClass: GameScoreDialog.self)).instantiate(withOwner: self, options: nil)[0] as! UIView
+//            return UINib(nibName:  "GameScoreDialog", bundle: Bundle(for: GameScoreDialog.self)).instantiate(withOwner: self, options: nil)[0] as! UIView
     }
     
     func xibSetup() {
@@ -69,12 +70,12 @@ import UIKit
     
     func loadViewFromNib() -> UIView {
         
-        let bundle = Bundle(for: type(of: self))
-        //  let nibName = type(of: self).description().components(separatedBy: ".").last!
-        let nib = UINib(nibName: "GameScoreDialog", bundle: bundle)
-        let view = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
+//        let bundle = Bundle(for: type(of: self))
+//        //  let nibName = type(of: self).description().components(separatedBy: ".").last!
+//        let nib = UINib(nibName: "GameScoreDialog", bundle: bundle)
+//        let view = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
         
-        return view
+        return UINib(nibName: "GameScoreDialog", bundle: Bundle().getBundle(swiftClass: GameScoreDialog.self)).instantiate(withOwner: self, options: nil)[0] as! UIView
     }
     
     public override func layoutSubviews() {
@@ -83,7 +84,7 @@ import UIKit
         
     }
     
-    override init(frame: CGRect) {
+   public override init(frame: CGRect) {
         super.init(frame: frame)
         xibSetup()
     }
