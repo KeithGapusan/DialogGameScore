@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
 
 
     s.platform     = :ios, "10.0"
-    s.source       = { :git => "https://github.com/KeithGapusan/DialogGameScore", :tag => "#{s.version}" }
+    s.source       = { :git => "https://github.com/KeithGapusan/DialogGameScore.git", :tag => "#{s.version}" }
     s.source_files  = "DialogGameScore/**/*.{h,m}"
     s.resource_bundles = {
         'DialogGameScore' => ['DialogGameScore/**/*.{storyboard,xib,xcassets,json,imageset,png,swift}']
