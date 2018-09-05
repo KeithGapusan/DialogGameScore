@@ -26,6 +26,8 @@ Pod::Spec.new do |s|
     s.resource_bundles = {
         'DialogGameScore' => ['DialogGameScore/**/*.{storyboard,xib,xcassets,json,imageset,png,swift}']
     }
+    s.pod_target_xcconfig = { "SWIFT_VERSION" => "4.0" }
+
 #s.source_files  = "iOSCommonUI/**/*.{h,m}"
 
 end
