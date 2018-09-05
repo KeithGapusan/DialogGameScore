@@ -12,6 +12,8 @@
 		F71AB279213F757200259626 /* GameScoreDialog.swift in Resources */ = {isa = PBXBuildFile; fileRef = F7FB0F63213E579A00CBDDBF /* GameScoreDialog.swift */; };
 		F71AB27C213F765E00259626 /* GameScoreViewModel.swift in Headers */ = {isa = PBXBuildFile; fileRef = F7FB0F69213E57E000CBDDBF /* GameScoreViewModel.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		F71AB27D213F765E00259626 /* GameScoreDialog.swift in Headers */ = {isa = PBXBuildFile; fileRef = F7FB0F63213E579A00CBDDBF /* GameScoreDialog.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		F71AB28F213FC4B400259626 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71AB28E213FC4B400259626 /* Extensions.swift */; };
+		F71AB290213FC57200259626 /* Extensions.swift in Resources */ = {isa = PBXBuildFile; fileRef = F71AB28E213FC4B400259626 /* Extensions.swift */; };
 		F7FB0F53213E578500CBDDBF /* DialogGameScore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7FB0F49213E578500CBDDBF /* DialogGameScore.framework */; };
 		F7FB0F58213E578500CBDDBF /* DialogGameScoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FB0F57213E578500CBDDBF /* DialogGameScoreTests.swift */; };
 		F7FB0F5A213E578500CBDDBF /* DialogGameScore.h in Headers */ = {isa = PBXBuildFile; fileRef = F7FB0F4C213E578500CBDDBF /* DialogGameScore.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -33,6 +35,7 @@
 /* Begin PBXFileReference section */
 		F71AB273213F653600259626 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
 		F71AB275213F6B2700259626 /* DialogGameScore.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DialogGameScore.podspec; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		F71AB28E213FC4B400259626 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		F7FB0F49213E578500CBDDBF /* DialogGameScore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DialogGameScore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7FB0F4C213E578500CBDDBF /* DialogGameScore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DialogGameScore.h; sourceTree = "<group>"; };
 		F7FB0F4D213E578500CBDDBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -63,6 +66,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F71AB28D213FC4A400259626 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				F71AB28E213FC4B400259626 /* Extensions.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
 		F7FB0F3F213E578500CBDDBF = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +95,7 @@
 		F7FB0F4B213E578500CBDDBF /* DialogGameScore */ = {
 			isa = PBXGroup;
 			children = (
+				F71AB28D213FC4A400259626 /* Utility */,
 				F71AB275213F6B2700259626 /* DialogGameScore.podspec */,
 				F71AB273213F653600259626 /* Podfile */,
 				F7FB0F6B213E589B00CBDDBF /* Model */,
@@ -224,6 +236,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F71AB290213FC57200259626 /* Extensions.swift in Resources */,
 				F71AB279213F757200259626 /* GameScoreDialog.swift in Resources */,
 				F71AB276213F6B2700259626 /* DialogGameScore.podspec in Resources */,
 				F71AB274213F653600259626 /* Podfile in Resources */,
@@ -246,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7FB0F6A213E57E000CBDDBF /* GameScoreViewModel.swift in Sources */,
+				F71AB28F213FC4B400259626 /* Extensions.swift in Sources */,
 				F7FB0F65213E579B00CBDDBF /* GameScoreDialog.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
