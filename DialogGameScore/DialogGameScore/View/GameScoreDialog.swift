@@ -29,12 +29,17 @@ import UIKit
     var view: UIView!
     public var delegate: GameDialogViewDelegate!
     static let shared = GameScoreDialog()
-
+    var viewModel : GameScoreViewModel?
+    
+    
+//    var viewModel : GameScoreDialo?
+    
     
     
     @IBAction func didPressedButton(_ sender: UIButton) {
         switch sender {
         case btnSubmit:
+            viewModel?.setScoreValue(textFieldHome: tfHome?.text ?? "0", textFieldOppenent: tfOpponent?.text ?? "0")
             self.delegate.didPressedButton(self.getCurrentTextFieldValue("submit"))
             break
         case btnCancel:
@@ -46,15 +51,10 @@ import UIKit
     }
     
     func getCurrentTextFieldValue(_ button: String) -> [String:Any]{
-       // let result = [String:Any]()
-        let result = ["button": button, "textFieldHome": Int((tfHome?.text)!) ?? 0, "textFieldOpponent":Int((tfOpponent?.text)!) ?? 0 ] as [String : Any]
-        return result
+        let result = viewModel?.getScoreValue("submit")
+        return result!
     }
     
-    public func instanceFromNib() -> UIView {
-        return UINib(nibName: "GameScoreDialog", bundle: Bundle().getBundle(swiftClass: GameScoreDialog.self)).instantiate(withOwner: self, options: nil)[0] as! UIView
-//            return UINib(nibName:  "GameScoreDialog", bundle: Bundle(for: GameScoreDialog.self)).instantiate(withOwner: self, options: nil)[0] as! UIView
-    }
     
     func xibSetup() {
         view = loadViewFromNib()
@@ -70,11 +70,6 @@ import UIKit
     
     func loadViewFromNib() -> UIView {
         
-//        let bundle = Bundle(for: type(of: self))
-//        //  let nibName = type(of: self).description().components(separatedBy: ".").last!
-//        let nib = UINib(nibName: "GameScoreDialog", bundle: bundle)
-//        let view = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
-        
         return UINib(nibName: "GameScoreDialog", bundle: Bundle().getBundle(swiftClass: GameScoreDialog.self)).instantiate(withOwner: self, options: nil)[0] as! UIView
     }
     
@@ -86,13 +81,19 @@ import UIKit
     
    public override init(frame: CGRect) {
         super.init(frame: frame)
+        self.viewModel = GameScoreViewModel.shared
+        self.viewModel?.setScoreValue(textFieldHome: "0", textFieldOppenent: "0")
         xibSetup()
+    
+    
     }
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        self.viewModel = GameScoreViewModel.shared
+        self.viewModel?.setScoreValue(textFieldHome: "0", textFieldOppenent: "0")
         xibSetup()
-        
+  
     }
 
     

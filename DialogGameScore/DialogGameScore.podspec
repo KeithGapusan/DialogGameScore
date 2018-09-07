@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
     s.social_media_url   = "https://www.instagram.com/keithgapusan/"
 
 
-    s.platform     = :ios, "10.0"
+    s.platform     = :ios, "9.0"
     s.source       = { :git => "https://github.com/KeithGapusan/DialogGameScore.git", :tag => "#{s.version}" }
     s.source_files  = "DialogGameScore/**/*.{h,m,swift,storyboard,xib.json}"
     s.resource_bundles = {

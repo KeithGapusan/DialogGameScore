@@ -15,11 +15,13 @@
 		F71AB28F213FC4B400259626 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71AB28E213FC4B400259626 /* Extensions.swift */; };
 		F71AB290213FC57200259626 /* Extensions.swift in Resources */ = {isa = PBXBuildFile; fileRef = F71AB28E213FC4B400259626 /* Extensions.swift */; };
 		F7FB0F53213E578500CBDDBF /* DialogGameScore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7FB0F49213E578500CBDDBF /* DialogGameScore.framework */; };
-		F7FB0F58213E578500CBDDBF /* DialogGameScoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FB0F57213E578500CBDDBF /* DialogGameScoreTests.swift */; };
 		F7FB0F5A213E578500CBDDBF /* DialogGameScore.h in Headers */ = {isa = PBXBuildFile; fileRef = F7FB0F4C213E578500CBDDBF /* DialogGameScore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F7FB0F65213E579B00CBDDBF /* GameScoreDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FB0F63213E579A00CBDDBF /* GameScoreDialog.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		F7FB0F66213E579B00CBDDBF /* GameScoreDialog.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7FB0F64213E579A00CBDDBF /* GameScoreDialog.xib */; };
 		F7FB0F6A213E57E000CBDDBF /* GameScoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FB0F69213E57E000CBDDBF /* GameScoreViewModel.swift */; };
+		F7FC9AED2140957D00E477DF /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FC9AEC2140957D00E477DF /* Score.swift */; };
+		F7FC9AF22140D76900E477DF /* Score.swift in Resources */ = {isa = PBXBuildFile; fileRef = F7FC9AEC2140957D00E477DF /* Score.swift */; };
+		F7FC9AF32140D76900E477DF /* GameScoreViewModel.swift in Resources */ = {isa = PBXBuildFile; fileRef = F7FB0F69213E57E000CBDDBF /* GameScoreViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,11 +42,10 @@
 		F7FB0F4C213E578500CBDDBF /* DialogGameScore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DialogGameScore.h; sourceTree = "<group>"; };
 		F7FB0F4D213E578500CBDDBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7FB0F52213E578500CBDDBF /* DialogGameScoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DialogGameScoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F7FB0F57213E578500CBDDBF /* DialogGameScoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogGameScoreTests.swift; sourceTree = "<group>"; };
-		F7FB0F59213E578500CBDDBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7FB0F63213E579A00CBDDBF /* GameScoreDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScoreDialog.swift; sourceTree = "<group>"; };
 		F7FB0F64213E579A00CBDDBF /* GameScoreDialog.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameScoreDialog.xib; sourceTree = "<group>"; };
 		F7FB0F69213E57E000CBDDBF /* GameScoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScoreViewModel.swift; sourceTree = "<group>"; };
+		F7FC9AEC2140957D00E477DF /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +79,6 @@
 			isa = PBXGroup;
 			children = (
 				F7FB0F4B213E578500CBDDBF /* DialogGameScore */,
-				F7FB0F56213E578500CBDDBF /* DialogGameScoreTests */,
 				F7FB0F4A213E578500CBDDBF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -95,25 +95,16 @@
 		F7FB0F4B213E578500CBDDBF /* DialogGameScore */ = {
 			isa = PBXGroup;
 			children = (
+				F7FC9AEB2140956200E477DF /* Model */,
 				F71AB28D213FC4A400259626 /* Utility */,
 				F71AB275213F6B2700259626 /* DialogGameScore.podspec */,
 				F71AB273213F653600259626 /* Podfile */,
-				F7FB0F6B213E589B00CBDDBF /* Model */,
 				F7FB0F68213E57AD00CBDDBF /* ViewModel */,
 				F7FB0F67213E57A600CBDDBF /* View */,
 				F7FB0F4C213E578500CBDDBF /* DialogGameScore.h */,
 				F7FB0F4D213E578500CBDDBF /* Info.plist */,
 			);
 			path = DialogGameScore;
-			sourceTree = "<group>";
-		};
-		F7FB0F56213E578500CBDDBF /* DialogGameScoreTests */ = {
-			isa = PBXGroup;
-			children = (
-				F7FB0F57213E578500CBDDBF /* DialogGameScoreTests.swift */,
-				F7FB0F59213E578500CBDDBF /* Info.plist */,
-			);
-			path = DialogGameScoreTests;
 			sourceTree = "<group>";
 		};
 		F7FB0F67213E57A600CBDDBF /* View */ = {
@@ -133,9 +124,10 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		F7FB0F6B213E589B00CBDDBF /* Model */ = {
+		F7FC9AEB2140956200E477DF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F7FC9AEC2140957D00E477DF /* Score.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -236,6 +228,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7FC9AF22140D76900E477DF /* Score.swift in Resources */,
+				F7FC9AF32140D76900E477DF /* GameScoreViewModel.swift in Resources */,
 				F71AB290213FC57200259626 /* Extensions.swift in Resources */,
 				F71AB279213F757200259626 /* GameScoreDialog.swift in Resources */,
 				F71AB276213F6B2700259626 /* DialogGameScore.podspec in Resources */,
@@ -260,6 +254,7 @@
 			files = (
 				F7FB0F6A213E57E000CBDDBF /* GameScoreViewModel.swift in Sources */,
 				F71AB28F213FC4B400259626 /* Extensions.swift in Sources */,
+				F7FC9AED2140957D00E477DF /* Score.swift in Sources */,
 				F7FB0F65213E579B00CBDDBF /* GameScoreDialog.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,7 +263,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7FB0F58213E578500CBDDBF /* DialogGameScoreTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +405,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = DialogGameScore/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ph.com.krsgapusan.DialogGameScore;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -434,6 +429,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = DialogGameScore/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ph.com.krsgapusan.DialogGameScore;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
