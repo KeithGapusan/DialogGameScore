@@ -16,11 +16,11 @@ import UIKit
 
 @objc public class GameScoreDialog: UIView {
 
-    @IBOutlet weak var lblTitle: UILabel!
-    @IBOutlet weak var lblTeamHome: UILabel!
-    @IBOutlet weak var lblTeamOpponent: UILabel!
+    @IBOutlet public  weak var lblTitle: UILabel!
+    @IBOutlet public  weak var lblTeamHome: UILabel!
+    @IBOutlet public  weak var lblTeamOpponent: UILabel!
     
-    @IBOutlet weak var tfHome: UITextField!
+    @IBOutlet public  weak var tfHome: UITextField!
     @IBOutlet weak var tfOpponent: UITextField!
     
     @IBOutlet weak var btnSubmit: UIButton!
@@ -51,7 +51,7 @@ import UIKit
     }
     
     func getCurrentTextFieldValue(_ button: String) -> [String:Any]{
-        let result = viewModel?.getScoreValue("submit")
+        let result = viewModel?.getScoreValue(button)
         return result!
     }
     
@@ -66,6 +66,8 @@ import UIKit
         view.autoresizingMask = [UIViewAutoresizing.flexibleWidth, UIViewAutoresizing.flexibleHeight]
         // Adding custom subview on top of our view (over any custom drawing > see note below)
         addSubview(view)
+        
+       // self.tfOpponent.text = String(describing: viewModel?.score?.home)
     }
     
     func loadViewFromNib() -> UIView {
