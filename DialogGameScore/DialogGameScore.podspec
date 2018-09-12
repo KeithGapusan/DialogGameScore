@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
 
 
     s.name         = "DialogGameScore"
-    s.version      = "0.0.1"
+    s.version      = "0.0.2"
 
     s.summary      = "A reusable popup dialog for two player games."
     s.description  = "A reusable popup dialog for two player games. This framework mainly used for my internal projects."
